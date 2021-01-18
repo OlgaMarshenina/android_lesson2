@@ -1,85 +1,72 @@
 package com.company;
 
 public class Main {
-
     public static void main(String[] args) {
+        /*System.out.println("Задание №1");
 
-        //Создать переменные всех пройденных типов данных и инициализировать их значения.
-        byte b = 101;
-        short s = 1123;
-        int i = 64536;
-        long l = 2147483648L;
-        double d = 4.1;
-        float f = 3.14f;
-        boolean bool = true;
-        char ch = 'c';
-        String a = "Hello";
-        System.out.println("Значение для типа byte = " + b);
-        System.out.println("Значение для типа short = " + s);
-        System.out.println("Значение для типа int = " + i);
-        System.out.println("Значение для типа long = " + l);
-        System.out.println("Значение для типа double = " + d);
-        System.out.println("Значение для типа float = " + f);
-        System.out.println("Значение для типа boolean = " + b);
-        System.out.println("Значение для типа char = " + ch);
-        System.out.println("Значение для типа String = " + a);
+        // Задать целочисленный массив, состоящий из элементов 0 и 1
+        // Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ]. С помощью цикла и условия заменить 0 на 1, 1 на 0;
 
-        //Написать метод, которому в качестве параметра передается строка, обозначающая имя.
-        //Метод должен вывести в консоль сообщение «Привет, указанное_имя!».
+        int[] arr = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 1) {
+                arr[i] = 0;
+            } else arr[i] = 1;
 
-        String name = "Ольга";
-        System.out.println("Привет, " + name + "!");
+            System.out.print(arr[i] + " ");
+        }
+
+
+        //Задать пустой целочисленный массив размером 8.
+        // С помощью цикла заполнить его значениями 0 3 6 9 12 15 18 21
+
+            System.out.println("Задание №2");
+            int arr1[] = new int[8];
+        for (int i = 1, j = 0; i < arr1.length; i++) arr1[i] = j += 3;{
+            for (int x : arr1)
+                System.out.print(x + " ");
+        }
+
+        //Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ] пройти по нему циклом,
+        // и числа меньшие 6 умножить на 2;
+        System.out.println("Задание №3");
+        int[] arr2 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < arr2.length; i++) {
+            if (arr2[i] < 6) {
+                arr2[i] *= 2;
+            } else continue;
+            System.out.print(arr2[i] + " ");
+        }
+        //Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое),
+        // и с помощью цикла(-ов) заполнить его диагональные элементы единицами;
+        System.out.println("Задание №4");
+        int[][] arr3 = new int[3][3];
+        for (int i = 0; i < arr3.length; i++) {
+            for (int j = 0, j2 = arr3[i].length; j < arr3[i].length; j++, j2--) {
+                if (i == j || i == (j2 - 1)) arr3[i][j] = 1;
+                System.out.print(arr3[i][j] + " ");
+            }
+        }*/
+        //** Задать одномерный массив и найти в нем минимальный и максимальный элементы (без помощи интернета);
+        System.out.println("Задание №5");
+        int[] arr4 = new int[5];
+        int min = arr4[0], max = arr4[0];
+        int imin = 0, imax = 0;
+        for (int i = 0; i < arr4.length; i++) {
+            arr4[i] = ((int)(Math.random() * 10));
+                if(arr4[i] < min){
+                    min = arr4[i];
+                    imin = i;
+                } else if(arr4[i] > max){
+                    max = arr4[i];
+                    imax = i;
+            }
+                System.out.println("Минимальное значение " + min + " у элемента с индексом " + imin);
+                System.out.println("Максимальное значение " + max + " у элемента с индексом " + imax);
+        }
 
     }
-
-        //Написать метод вычисляющий выражение a * (b + (c / d)) и возвращающий результат,
-        //где a, b, c, d – аргументы этого метода, имеющие тип float.
-        static float doTwo ( float a, float b, float c, float d){
-
-            return a * (b + (c / d));
-
-        }
-
-        //Написать метод, принимающий на вход два целых числа и проверяющий,
-        //что их сумма лежит в пределах от 10 до 20 (включительно), если да – вернуть true, в противном случае – false.
-        static boolean doThree ( int a, int b){
-            int sum = a + b;
-            if (sum >= 10 && sum <= 20) {
-                return true;
-            } else {
-                return false;
-
-            }
-        }
-        //Написать метод, которому в качестве параметра передается целое число, метод должен напечатать в консоль,
-        //положительное ли число передали или отрицательное.
-        //Замечание: ноль считаем положительным числом.
-
-
-        static void doFour ( int a){
-            if (a >= 0) {
-                System.out.println("Число" + a + "положительное");
-            } else {
-                System.out.println("Число" + a + "отрицательное");
-            }
-        }
-
-        //Написать метод, которому в качестве параметра передается целое число.
-        //Метод должен вернуть true, если число отрицательное, и вернуть false если положительное.
-        static boolean doFive ( int a){
-            if (a < 0) {
-                return true;
-            } else return false;
-        }
-
-
-    }
-
-
-
-
-
-
+}
 
 
 
