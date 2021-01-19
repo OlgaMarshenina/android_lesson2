@@ -2,7 +2,7 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
-        /*System.out.println("Задание №1");
+        System.out.println("Задание №1");
 
         // Задать целочисленный массив, состоящий из элементов 0 и 1
         // Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ]. С помощью цикла и условия заменить 0 на 1, 1 на 0;
@@ -46,7 +46,7 @@ public class Main {
                 if (i == j || i == (j2 - 1)) arr3[i][j] = 1;
                 System.out.print(arr3[i][j] + " ");
             }
-        }*/
+        }
         //** Задать одномерный массив и найти в нем минимальный и максимальный элементы (без помощи интернета);
         System.out.println("Задание №5");
         int[] arr4 = new int[5];
@@ -61,10 +61,9 @@ public class Main {
                     max = arr4[i];
                     imax = i;
             }
-                System.out.println("Минимальное значение " + min + " у элемента с индексом " + imin);
-                System.out.println("Максимальное значение " + max + " у элемента с индексом " + imax);
         }
-
+        System.out.println("Минимальное значение " + min + " у элемента с индексом " + imin);
+        System.out.println("Максимальное значение " + max + " у элемента с индексом " + imax);
     }
 }
 
